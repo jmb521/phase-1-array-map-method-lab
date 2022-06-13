@@ -10,7 +10,20 @@ const tutorials = [
   'what is the difference between event capturing and bubbling?',
   'what is JSONP?'
 ];
+// what does the this keyword mean?',
+// ["what", "does", "the", "this", "keyword", "mean?"]
+// ["w", "h", "a", "t"]
+// const titleCased = () => {
+//    return tutorials.map(tutorial => tutorial.split(" ").map(word => word[0].toUpperCase() + word.slice(1)).join(" "))
+// }
 
-const titleCased = () => {
-  return tutorials
+function titleCased() {
+  return tutorials.map(function(tutorial) {
+    return tutorial.split(" ").map(function(word) {
+       return word.charAt(0).toUpperCase() + word.slice(1)
+    }).join(" ")
+    // console.log(tutorialArray)
+  })
 }
+
+// titleCased()
